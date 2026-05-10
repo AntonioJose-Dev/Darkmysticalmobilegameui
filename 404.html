@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SHUV — El retorno</title>
-    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-    <script type="module" crossorigin src="/Darkmysticalmobilegameui/dist/assets/index-Cf4JO9PE.js"></script>
-    <link rel="stylesheet" crossorigin href="/Darkmysticalmobilegameui/dist/assets/index-BTpclHSj.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SHUV</title>
+  <script>
+    var pathSegmentsToKeep = 1;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
 </html>
